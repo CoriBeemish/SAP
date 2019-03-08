@@ -6,9 +6,10 @@
 ## Table of Contents
 - [What is SAP?](#what-is-sap)
 - [Why SAP?](#why-sap)
+  - [SAP Modules](#sap-modules)
 - [SAP Basics](#sap-basics)
   - [SAP Architecture](#sap-architecture)
-  - [SAP Work Processes]()
+  - [Client-Dependent vs. Client-Independent](#client-dependent-vs-client-independent)
 - [Transaction Codes](#transaction-codes)
 - [Flashcard List](#flashcard-list)
 - [Resources](#resources)
@@ -24,39 +25,75 @@ SAP is compatible with multiple platforms and operating systems such as Microsof
 
 ## Why SAP?
 
-SAP provides ERP (Enterprise Resource Planning) solutions and services. ERP is software that is built to support businesses and organizations in different industries, no matter their size or strength. The ERP package is designed to support and integrated every functional area of a business process such as procurement of goods and services, sale and distribution, finance, accountings, human resource, manufacturing, production planning, logistics & warehouse management. 
-ERP allows a business to be connected and integrated, which allows for efficient information flow from one business process to another as soon as information is entered into the system. This also allows automation of business processes of management, operational, and supporting processes. 
+SAP provides ERP (Enterprise Resource Planning) solutions and services, which is a package built to support businesses and organizations in different industries of any size. The ERP package is designed to support and integrate every functional area of a business such as procurement of goods and services, sales and distribution, finance, accounting, human resources, manufacturing, production planning, logistics, & warehouse management. 
+
+ERP allows a business to be connected and integrated, which allows for efficient information flow from one business process to another as soon as information is entered into the system. This also allows automation of business processes of management, operational, and supporting processes. SAP offers various **functional modules**, also known as **functional areas**, some of which are the following:
+- Financial Accounting (FI)
+- Financial Supply Chain Management (FSCM)
+- Controlling (CO)
+- Materials Management (MM)
+- Sales and Distribution (SD)
+- Logistics Execution (LE)
+- Production Planning (PP)
+- Quality Management (QM)
+- Plant Maintenance (PM)
+- Project System (PS)
+- Human Resources (HR)
+
+**Advantages of ERP**
+- Saves time and expenses.
+- Allows faster decision-making by the management, utilizing the data and reporting tools designed in the systems.
+- Single data source and sharing of data among all the units of an organization.
+- Helps in tracking every transaction that takes place in an organization, from starting till end.
+- Supplies real-time information whenever required.
+- Provides synchronized information transfer in between different functional areas such as sales, marketing, finance, manufacturing, human resource, logistics, etc.
+
+**Disadvantages of ERP**
+- It is not always easy to incorporate ERP in an organization.
+- Sometimes business processes critical to an organization are to be re-engineered to align them with an ERP solution.
+- Cost of complex integration can be very high.
+- Switching from one ERP solution to another increases the implementation cost even further.
+- End-users are to be trained for their daily operations.
+- Customization is not preferred.
+
+SAP's ERP package is called ECC (**E**nterprise **C**entral **C**omponent).
+
+### SAP Modules
 
 ## SAP Basics
 
 ### SAP Architecture
-<details>
-  <summary> SAP Architecture </summary>
 
-The current verison of SAP software is known as SAP ERP Central Component (ECC). Previously, it was SAP R/3, where the R stood for "Real-time data processing" and the "3" was for "3-tier". The three tiers of SAP are:
+SAP's based its R/3 architecture on a three-tier client/server model. The R in "R/3" stands for "Real-time data processing" and the "3" is for "3-tier". The three tiers of SAP are:
   - The Presentation Layer/Server
   - The Application Layer/Server
   - The Database Layer/Server
 
-The presentation layer of SAP consists of the SAP GUI
+The presentation server is also known as the client layer. In the presentation layer, the user uses the SAP GUI to interact with the SAP system. SAPGUI accepts inputs from the user and sends these requests to the Application server for processing. The application server sends the results back to the SAPGUI which formats the output for display.
 
+The application server is also known as the Kernel Layer and Basic Layer. All SAP application programs are executed in the application layer. The application layer serves as the communicator between the presentation layer and the database layer. The components of an application server consists of a dispatcher and multiple work processes. All requests that come in from the presentation server are directed first to the dispatcher. Each request sent to the dispatcher writes them to the dispatcher queue which works on a first-in, first-out basis, thus each request is allocated to the first available work process one at a time. To perform any processing for a user's request, a work process needs to address two special memory areas: the user context and the program roll area.
+- The user context is a memory area that contains information about the user such as a user's current settings, a user's authorizations, and the names of the programs the user is currently running. When a user logs on, a user context is allocated for that logon. When they log off, that user context is freed.
+- Each time a user starts a program, a roll area is created for that instance of that program. The roll area is a memory area that contains information about the programs execution, such as the values of the variables, the dynamic memory allocations, and the current program pointer. If two users run the same program at the same time, two roll areas will exist, one for each user. The roll area is freed when the program ends. 
+- There are seven types of work processes. Each handles a specific type of request.
+  - D (Dialog): Dialog requests
+  - V (Update): Requests to update data in the database
+  - B (Background): Background jobs
+  - S (Spool): Print spool requests
+  - E (Enqueue): Logical lock requests
+  - M (Message): Routes messages between application servers within an R/3 system
+  - G (Gateway): Funnels messages into and out of the R/3 system
 
-  
-The sole purpose of R/3 is to provide a suite of tightly integrated, large-scale business applications. The standard functional modules
-shipped with the standard SAP package are the following:
-- PP (Production Planning)
-- MM (Materials Management)
-- SD (Sales and Distribution)
-- FI (Financial Accounting)
-- CO (Controlling)
-- AM (Fixed Assets Management)
-- PS (Project System)
-- WF (Workflow)
-- IS (Industry Solutions)
-- HR (Human Resources)
-- PM (Plant Maintenance)
-- QM (Quality Management)
-  </details>
+The database server stores all of the data of an SAP enterprise system. Each SAP system has a central database in which the entire dataset is stored. Not only the application data, but also all the administration data, customization settings, ABAP source code, etc. are stored here. EVERYTHING is stored in the database. The software component responsible for the database layer consists of the RDBMS and the actual database. The **RDBMS** (Relation Database Management System) sends the data back to the database server, which then passes the information back to the application server. The application server in turn passes that information to your ABAP program.
+- ABAP/4 code is portable between databases. To access the database of an ABAP program, you will need to code SAP's Open SQL, which is a subset and variation of SQL. The ABAP interpreter passes all Open SQL statements to the database interface as part of the work process. There is it converted to SQL, which is native to the installed RDMS.
+
+### Client-Dependent vs. Client-Independent
+
+A client is a logical portion of an SAP R/3 physical database. From a business standpoint, a client can be interpreted as a logical group of companies. All customization, configuration, and development are all done in SAP in a client. More information about client usage below.
+The data from customizing and development may be stored within an individual client (client-dependent data) or amongst all clients (client-independent data) in the SAP system.
+- Client-dependent data is defined as data specific to an individual client. Examples of client-dependent data include number ranges, ABAP variants, and user masters as well as the data that is created or updated through SAP R/3 transactions.
+- Client-independent data can be defined as data contained across all clients in the system. Examples of client-independent data include data dictionary objects (tables, views), ABAP source code, screens, and menus.
+
+A table viewed by the data dictionary in an R/3 database is client-dependent if the first field is of type CLNT and the field is names MANDT. Otherwise, the table is client-independent. 
 
 ## Transaction Codes
 - ABAP Dictionary - **SE11**
