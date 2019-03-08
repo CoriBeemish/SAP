@@ -10,8 +10,13 @@
 - [SAP Basics](#sap-basics)
   - [SAP Architecture](#sap-architecture)
   - [Client-Dependent vs. Client-Independent](#client-dependent-vs-client-independent)
+- [SAP BASIS](#sap-basis)
+- [SAP ABAP](#sap-abap)
+  - [ABAP Workbench](#abap-workbench)
 - [Transaction Codes](#transaction-codes)
+  - [What is a transaction code?](#what-is-a-transaction-code)
 - [Flashcard List](#flashcard-list)
+- [How I installed my own SAP instance](#how-i-installed-my-own-sap-instance)
 - [Resources](#resources)
   - [Tutorials](#tutorials)
   - [Websites](#websites)
@@ -95,6 +100,16 @@ The data from customizing and development may be stored within an individual cli
 
 A table viewed by the data dictionary in an R/3 database is client-dependent if the first field is of type CLNT and the field is names MANDT. Otherwise, the table is client-independent. 
 
+## SAP BASIS
+Basis is like an operating system for R/3. It sits between the ABAP code and the computer's operating system. It's "middleware" for SAP. 
+SAP also provides a suite of tools for administering the Basis system. These tools perform tasks such as system performance monitoring, configuration, and system maintenance. 
+Basis is designed to run in a client/server configuration. 
+
+
+## SAP ABAP
+ABAP is the programming language used by SAP to develop business application support and development. It only runs inside SAP's ABAP runtime environment. APAB is an event-driven programming language where user actions and system events control the execution of an application. 
+ABAP is also called ABAP/4. The "4" in ABAP/4 stands for "fourth generation language". 
+
 ## Transaction Codes
 - ABAP Dictionary - **SE11**
 - ABAP Editor - **SE38**
@@ -119,17 +134,17 @@ A table viewed by the data dictionary in an R/3 database is client-dependent if 
   - Market product standard version of SAP software that is customizable during implementation/installation to the client's specifications
 - **What is SAP "Integration"?**
   - Data and module integration for all existing business processes in an enterprise
-- What is SAP's current development platform?
+- **What is SAP's current development platform?**
   - NetWeaver
-- What does NetWeaver support?
+- **What does NetWeaver support?**
   - ABAP and JAVA
-- What are the advantages of SAP's Real-Time Processing?
+- **What are the advantages of SAP's Real-Time Processing?**
   - Immediate data processing across all interconnected processes, efficient and less time-consuming execution of transactions, and quicker order turnarounds and product to market
-- What is SAP R/3 also called?
+- **What is SAP R/3 also called?**
   - SAP ERP Central Component (ECC)
-- What type of architecture does SAP have?
+- **What type of architecture does SAP have?**
   - 3-tier client/server architecture
-- What are the advantages of SAP's client-server architecture?
+- **What are the advantages of SAP's client-server architecture?**
   - Utilizing centrailized data resources helps reduce processing time, integrating various applications provides a seamless business environment, and allows usage of different hardware and OS on the server
 - What are the 3-tiers of SAP?
   - Presentation layer, application layer, and database layer
@@ -308,8 +323,13 @@ A table viewed by the data dictionary in an R/3 database is client-dependent if 
   
 
 ## Resources
+
+### Websites
 - https://help.sap.com/viewer/index
 - https://www.tutorialspoint.com/sap
-- https://en.wikipedia.org/wiki/SAP_SE (No joke! I actually learned a lot through Wikipedia about SAP and its systems. Wiki definitley earned its $4 donation!)
-- Udemy's SAP ABAP courses by Peter Moxon
+- https://en.wikipedia.org/wiki/SAP_SE 
 - https://erproof.com/abap/
+
+### Videos
+- Udemy's SAP ABAP courses by Peter Moxon
+
