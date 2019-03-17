@@ -12,7 +12,8 @@
   - [Client-Dependent vs. Client-Independent](#client-dependent-vs-client-independent)
 - [SAP BASIS](#sap-basis)
 - [SAP ABAP](#sap-abap)
-  - [ABAP Workbench](#abap-workbench)
+  - [SAP ABAP Certification Rubric](#sap-abap-certification-rubric)
+  - [ABAP Workbench Foundations](#bc400-abap-workbench-foundations)
 - [Transaction Codes](#transaction-codes)
   - [What is a transaction code?](#what-is-a-transaction-code)
 - [Flashcard List](#flashcard-list)
@@ -69,7 +70,7 @@ SAP's ERP package is called ECC (**E**nterprise **C**entral **C**omponent).
 
 ### SAP Architecture
 
-SAP's based its R/3 architecture on a three-tier client/server model. The R in "R/3" stands for "Real-time data processing" and the "3" is for "3-tier". The three tiers of SAP are:
+SAP's based its R/3 architecture on a three-tier client/server model. The R in "R/3" stands for "Real-time data processing" and the "3" is for "3-tier". The three tiers of SAP are from high to low levels:
   - The Presentation Layer/Server
   - The Application Layer/Server
   - The Database Layer/Server
@@ -109,6 +110,25 @@ Basis is designed to run in a client/server configuration.
 ## SAP ABAP
 ABAP is the programming language used by SAP to develop business application support and development. It only runs inside SAP's ABAP runtime environment. APAB is an event-driven programming language where user actions and system events control the execution of an application. 
 ABAP is also called ABAP/4. The "4" in ABAP/4 stands for "fourth generation language". 
+
+## SAP ABAP Certification Rubric
+- BC400 ABAP Workbench Foundations
+- BC401 ABAP Objects
+- BC402 Advanced ABAP
+- BC405 Programming ABAP Reports
+- BC410 Developing Screen-Based User Dialogs
+- BC414 Programming Database Changes
+- BC425 Enhancements and Modifications
+- BC427 Enhancement Framework
+- BC430 ABAP Dictionary
+- NET310 Fundamentals of Web Dynpro for ABAP
+- NW001 SAP NetWeaver – Overview
+
+### BC400 ABAP Workbench Foundations
+#### How to execute an ABAP program
+#### How to search for repository objects
+#### How to navigate in the ABAP Workbench
+####
 
 ## Transaction Codes
 - ABAP Dictionary - **SE11**
