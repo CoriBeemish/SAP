@@ -1,8 +1,7 @@
 # SAP
 
-> I've started this repository to document and follow my journey through studying SAP and SAP ABAP. Below are the resources I've
-> used and swaths of information I've gathered to hopefully help other people on the same journey. 
-
+> I've started this repository to document and follow my journey through studying SAP and SAP's programming language, ABAP. Below are   > my notes and my collection of resources I've used to study. Hopefully my notes might help other people on the same journey. 
+ 
 ## Table of Contents
 - [What is SAP?](#what-is-sap)
 - [Why SAP?](#why-sap)
@@ -31,7 +30,12 @@ SAP is compatible with multiple platforms and operating systems such as Microsof
 
 ## Why SAP?
 
-SAP provides ERP (Enterprise Resource Planning) solutions and services, which is a package built to support businesses and organizations in different industries of any size. The ERP package is designed to support and integrate every functional area of a business such as procurement of goods and services, sales and distribution, finance, accounting, human resources, manufacturing, production planning, logistics, & warehouse management. 
+SAP provides ERP (Enterprise Resource Planning) solutions and services, which is a package built to support businesses and organizations in different industries of any size. The ERP package is designed to support and integrate every functional area of a business such as procurement of goods and services, sales and distribution, finance, accounting, human resources, manufacturing, production planning, logistics, & warehouse management. The following are some of the colutions SAP offers in it's *mySAP Business Suite*:
+- SAP customer relationship management (CRM)
+- SAP Enterprise Resource Planning (ERP)
+- SAP product lifecycle management (PLM)
+- SAP supplier relationship management (SRM)
+- SAP supply chain management (SCM) 
 
 ERP allows a business to be connected and integrated, which allows for efficient information flow from one business process to another as soon as information is entered into the system. This also allows automation of business processes of management, operational, and supporting processes. SAP offers various **functional modules**, also known as **functional areas**, some of which are the following:
 - Financial Accounting (FI)
@@ -63,6 +67,10 @@ ERP allows a business to be connected and integrated, which allows for efficient
 - Customization is not preferred.
 
 SAP's ERP package is called ECC (**E**nterprise **C**entral **C**omponent).
+
+### NetWeaver
+In SAP's business suite solutions, they also offer SAP NetWeaver, which allows the user to access SAP's systems to enter and display data. SAP NetWeaver is the technical foundation on which almost all mySAP solutions are developed from. SAP NetWeaver provides people integration, information integration, process integration, and application platform.
+For the layer of people integration, SAP NetWeaver allows 
 
 ### SAP Modules
 
