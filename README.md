@@ -1,6 +1,6 @@
 # SAP
 
-> I've started this repository to document and follow my journey through studying SAP and SAP's programming language, ABAP. Below are   > my notes and my collection of resources I've used to study. Hopefully my notes might help other people on the same journey. 
+> I've started this repository to document and follow my journey through studying SAP and SAP's programming language, ABAP. Below are my notes and my collection of resources I've used to study. Hopefully my notes might help other people on the same journey. 
  
 ## Table of Contents
 - [What is SAP?](#what-is-sap)
@@ -70,7 +70,9 @@ SAP's ERP package is called ECC (**E**nterprise **C**entral **C**omponent).
 
 ### NetWeaver
 In SAP's business suite solutions, they also offer SAP NetWeaver, which allows the user to access SAP's systems to enter and display data. SAP NetWeaver is the technical foundation on which almost all mySAP solutions are developed from. SAP NetWeaver provides people integration, information integration, process integration, and application platform.
-For the layer of people integration, SAP NetWeaver allows 
+Integration Layer: People Integration
+SAP NetWeaver is an enterprise portal that allows multiple users to log into SAP's system and view, edit, and enter data into multiple different business processes. The core functions of SAP Enterprise Portal are written in Java, so you would need a J2EE runtime environment such as the one provided by the SAP Web Application Server Java.
+
 
 ### SAP Modules
 
