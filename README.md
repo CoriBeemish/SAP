@@ -121,7 +121,7 @@ Basis is designed to run in a client/server configuration.
 ABAP is the programming language used by SAP to develop business application support and development. It only runs inside SAP's ABAP runtime environment. APAB is an event-driven programming language where user actions and system events control the execution of an application. 
 ABAP is also called ABAP/4. The "4" in ABAP/4 stands for "fourth generation language". 
 
-## SAP ABAP Certification Rubric
+### SAP ABAP Certification Rubric
 - BC400 ABAP Workbench Foundations
 - BC401 ABAP Objects
 - BC402 Advanced ABAP
@@ -134,11 +134,13 @@ ABAP is also called ABAP/4. The "4" in ABAP/4 stands for "fourth generation lang
 - NET310 Fundamentals of Web Dynpro for ABAP
 - NW001 SAP NetWeaver – Overview
 
-### BC400 ABAP Workbench Foundations
-#### How to execute an ABAP program
-#### How to search for repository objects
-#### How to navigate in the ABAP Workbench
-####
+### SAP ABAP Basics
+SAP ABAP is a typed object-oriented programming language that is platform-independent. It's meant for dialog-based business applications and to support type-specific processing of data, ABAP supports type converstions and type casting. This also enables AVAP to develop multi-language applications. To ensure that SAP can continue being reliable and scalable, applications implemented in ABAP will also be able to run in future releases and thus it is upward-compatible.
+
+All ABAP programs are made up of individual statments, always starting with a ABAP keyword and ending with a period. Statements can be indented and you can put multiple ABAP statements onto a single line. ABAP is not case-sensitive, but you do need a space between each word for an ABAP statement to work properly. You can combine consecutive ABAP statements with a colon :. Start with an ABAP keyword followed by a colon and then list the operands of the statements, seperated by commas. End the combined statement with a period just like you would with a single statement. 
+
+Comment lines are introduced with an asterisk *. Asterisks are used for comments on a single line. For an inline comment, you must use doulbe quotation marks ".
+
 
 ## Transaction Codes
 - ABAP Dictionary - **SE11**
