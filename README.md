@@ -352,8 +352,51 @@ Comment lines are introduced with an asterisk *. Asterisks are used for comments
   - A transaction code is a 3 or 4 character code associated with a transaction. 
 - What is a tcode?
   - A transaction code
-  
 
+### TAW 10_1 Unit Review Flashcards
+- (True/False) You can only work in one window (session) at a time in an SAP system.
+  - False. 
+  - **Explanation:** You can work in up to 16 windows (sessions) simultaneously per logon.
+- Which of the following statements accurately describe a client in an SAP system?
+  - **A client represents a completely independent business entity**
+  - A client has its own database
+  - A client corresponds to a customer
+  - **A client may represent an entire company**
+  - **Explanation:** Data for all clients in an SAP system is stored within a single common database. The data is divided by client numbers so that different companies and different clients can be administered and controlled. A client is not just a customer within an SAP system.
+- Which of the following strings are valid entries in the command field:
+  - **/nend**
+  - **/nex**
+  - ?SM04
+  - **/nsm04**
+  - **From SAP Easy Access: SM04**
+  - **From SAP Easy Access: search_sap_menu**
+  - **Explanation:** From the SAP Easy Access screen, you can directly enter transaction codes into it. From any other function, you need a "/n". ?SM04 isn't a valid entry. search_sap_menu brings up a seearch screen for entries in the SAP menu.
+- Which of the following personalization options are available in the SAP GUI:
+  - **You can change the font size (within limits) in the SAP GUI**
+  - **You can have system messages displayed in a dialog box**
+  - You can change the size of input fields
+  - **You can suppress the display of pictures in the SAP GUI**
+  - Every user can display a picture of his or her choice on the SAP Easy Access screen
+  - **You can use a personal input history on your front end**
+  - **Explanation:** You can personalize the SAP GUI thought the Extras Menu -> Customizing of local layout pushbutton, and using the status bar and Help → Settings. The input fields can't change and you can't change the screen on the SAP Easy Access screen.
+- What are the advantages of a three-tier client/server configuration as compared to a single-tier or two-tier configuration?
+  - Simpler scalability and load balancing is possible
+- Which process at the application server level receives the user request?
+  - Dispatcher
+  - **Explanation:** The dispatcher recieves the user request from the SAP GUI (the presentation server) and passes it onto an available work process. The buffer allows quicker processing of user requests. 
+- Which work process types can you find on an SAP Web Application Server?
+  - **Dialog work process**
+  - Message server work process
+  - **Update work process**
+  - ICM work process
+  - **Background work process**
+  - **Enqueue work process**
+  - **Spool work process**
+  - **Explanation:** The message server and ICM processes are not work processes.
+- The term central instance describes the instance:
+  - On which all application processes required for operating an SAP system are configured
+  - **Explanation:** The central instance also contains 
+  
 ## Resources
 
 ### Websites
